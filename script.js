@@ -1,5 +1,4 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyBPsEzSXJS4B-0-qdI19FLn8mnjCLBuzG8",
+apiKey: "AIzaSyBPsEzSXJS4B-0-qdI19FLn8mnjCLBuzG8",
   authDomain: "my-private-chat-20bd4.firebaseapp.com",
   databaseURL: "https://my-private-chat-20bd4-default-rtdb.firebaseio.com",
   projectId: "my-private-chat-20bd4",
@@ -53,3 +52,5 @@ function showChat() {
   document.getElementById("loginPage").style.display = "none";
   document.getElementById("chatPage").style.display = "block";
 }
+
+  
