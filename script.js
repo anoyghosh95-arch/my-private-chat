@@ -43,7 +43,7 @@ function login() {
 
   auth.signInWithEmailAndPassword(email, password)
     .then(() => {
-      message.innerText = "✅ Log In সফল হয়েছে!";
+    showChat();
     })
     .catch((error) => {
       message.innerText = "❌ " + error.message;
