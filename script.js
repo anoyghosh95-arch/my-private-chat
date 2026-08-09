@@ -30,27 +30,3 @@ function signUp() {
     });
 }
 
-function login() {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-  const message = document.getElementById("message");
-
-  if (!email || !password) {
-    message.innerText = "Email এবং Password লিখুন।";
-    return;
-  }
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then(() => {
-    showChat();
-    })
-    .catch((error) => {
-      message.innerText = "❌ " + error.message;
-    });
-}
-function showChat() {
-  document.getElementById("loginPage").style.display = "none";
-  document.getElementById("chatPage").style.display = "block";
-}
-
-  
