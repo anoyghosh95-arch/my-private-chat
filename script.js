@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBPsEzSXJS4B-0qdI19FLn8mnjCLBuzG8",
+  apiKey: "AIzaSyBPsEzSXJS4B-0-qdI19FLn8mnjCLBuzG8",
   authDomain: "my-private-chat-20bd4.firebaseapp.com",
   databaseURL: "https://my-private-chat-20bd4-default-rtdb.firebaseio.com",
   projectId: "my-private-chat-20bd4",
@@ -12,47 +12,40 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
-function showMessage(text) {
-  document.getElementById("message").innerText = text;
-}
-
 function signUp() {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
+  const message = document.getElementById("message");
 
   if (!email || !password) {
-    showMessage("Email এবং Password লিখুন।");
+    message.innerText = "Email এবং Password লিখুন।";
     return;
   }
 
-  showMessage("Sign Up হচ্ছে...");
-
   auth.createUserWithEmailAndPassword(email, password)
     .then(() => {
-      showMessage("✅ Sign Up সফল হয়েছে!");
+      message.innerText = "✅ Sign Up সফল হয়েছে!";
     })
     .catch((error) => {
-      showMessage("❌ " + error.message);
+      message.innerText = "❌ " + error.message;
     });
 }
 
 function login() {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
+  const message = document.getElementById("message");
 
   if (!email || !password) {
-    showMessage("Email এবং Password লিখুন।");
+    message.innerText = "Email এবং Password লিখুন।";
     return;
   }
 
-  showMessage("Log In হচ্ছে...");
-
   auth.signInWithEmailAndPassword(email, password)
     .then(() => {
-      showMessage("✅ Log In সফল হয়েছে!");
+      message.innerText = "✅ Log In সফল হয়েছে!";
     })
     .catch((error) => {
-      showMessage("❌ " + error.message);
+      message.innerText = "❌ " + error.message;
     });
 }
-          
