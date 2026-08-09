@@ -49,3 +49,7 @@ function login() {
       message.innerText = "❌ " + error.message;
     });
 }
+function showChat() {
+  document.getElementById("loginPage").style.display = "none";
+  document.getElementById("chatPage").style.display = "block";
+}
