@@ -4,18 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Private Chat</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>My Private Chat</h1>
 
-  <h2>Sign Up</h2>
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-  <button>Sign Up</button>
+  <div class="container">
 
-  <h2>Log In</h2>
-  <button>Log In</button>
+    <h1>My Private Chat</h1>
 
-  <p>আমার Private Chat Website</p>
+    <h2>Account</h2>
+
+    <input
+      type="email"
+      id="email"
+      placeholder="তোমার Email"
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+    >
+
+    <button onclick="signUp()">Sign Up</button>
+
+    <button onclick="login()">Log In</button>
+
+    <p id="message"></p>
+
+  </div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <!-- তোমার JavaScript -->
+  <script src="script.js"></script>
+
 </body>
 </html>
