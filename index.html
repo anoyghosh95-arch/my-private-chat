@@ -1,46 +1,60 @@
+<!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Private Chat</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>My Private Chat</h1>
+  <!-- LOGIN PAGE -->
+  <div id="loginPage">
 
-    <h2>Account</h2>
+    <h1>🔐 My Private Chat</h1>
 
-    <input
-      type="email"
-      id="email"
-      placeholder="তোমার Email"
-    >
+    <input id="email" type="email" placeholder="Email">
 
-    <input
-      type="password"
-      id="password"
-      placeholder="Password"
-    >
+    <input id="password" type="password" placeholder="Password">
 
-    <button onclick="signUp()">Sign Up</button>
+    <button id="signupBtn">Sign Up</button>
 
-    <button onclick="login()">Log In</button>
+    <button id="loginBtn">Log In</button>
 
     <p id="message"></p>
 
   </div>
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 
-  <!-- তোমার JavaScript -->
-  <script src="script.js"></script>
+  <!-- CHAT PAGE -->
+  <div id="chatPage" style="display:none;">
+
+    <h1>💬 Private Chat</h1>
+
+    <div id="messages"></div>
+
+    <input id="chatInput" type="text" placeholder="Message লিখুন">
+
+    <button id="sendBtn">Send</button>
+
+    <button id="logoutBtn">Log Out</button>
+
+  </div>
+
+</div>
+
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
